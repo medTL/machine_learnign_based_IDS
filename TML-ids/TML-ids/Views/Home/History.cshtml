@@ -1,0 +1,75 @@
+@model IEnumerable<Record>
+@{
+    ViewData["Title"] = "History Page";
+}
+
+<div class="panel">
+    <button onclick="window.location.href='@Url.Action("ClearDatabase")'" class="btn btn-danger">Clear Database</button>
+</div>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Source ip</th>
+        <th scope="col">Destination ip</th>
+        <th scope="col">Destination port</th>
+        <th scope="col">Time</th>
+        <th scope="col">Attack</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var record in Model)
+    {
+        <tr>
+            <td>@record.SourceIp</td>
+            <td>@record.DestinationIp</td>
+            <td>@record.DestinationPort</td>
+            <td>
+                @if (record.CreatedAt != null)
+                {
+                    @record.CreatedAt.Value.ToString("MMM dd : HH:mm:ss")
+                }
+                else
+                {
+                    <p>--</p>
+                }
+
+            </td>
+            <td>@record.Label</td>
+            <td>
+                <i data-id="@record.Id" data-toggle="modal" data-target="#deleteModal" class="fas fa-trash-alt"></i>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Delete Record</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form asp-action="DeleteRecord" method="post">
+                <div class="modal-body">
+                    <p>Are you sure you want to delete this record</p>
+
+                    <input name="Id" type="hidden" id="deleted-record">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="~/js/HistoryPageHandler.js"></script>
+}
