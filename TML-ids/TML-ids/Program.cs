@@ -19,6 +19,11 @@ namespace TML_ids
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder => { webBuilder
+                        .ConfigureLogging((ctx, builder) =>
+                        {
+                            builder.AddConfiguration(ctx.Configuration.GetSection("Logging"));
+                            builder.AddFile(o => o.RootPath = ctx.HostingEnvironment.ContentRootPath);
+                        })
                     .UseStartup<Startup>(); 
                     webBuilder.UseUrls("http://0.0.0.0:2500");
                 });

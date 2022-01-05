@@ -1,0 +1,541 @@
+﻿dbug: Microsoft.Extensions.Hosting.Internal.Host[1] @ 2022-01-05T21:41:54.5108006+01:00
+      Hosting starting
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[0] @ 2022-01-05T21:41:54.5434258+01:00
+      User profile is available. Using '/home/talel/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+dbug: Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository[37] @ 2022-01-05T21:41:54.5525287+01:00
+      Reading data from file '/home/talel/.aspnet/DataProtection-Keys/key-fc1364d1-3133-48cb-ab41-911be5709b21.xml'.
+dbug: Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository[37] @ 2022-01-05T21:41:54.5540202+01:00
+      Reading data from file '/home/talel/.aspnet/DataProtection-Keys/key-db420dee-7a2d-4d02-ace2-10c9835217a4.xml'.
+dbug: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[18] @ 2022-01-05T21:41:54.5567880+01:00
+      Found key {fc1364d1-3133-48cb-ab41-911be5709b21}.
+dbug: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[18] @ 2022-01-05T21:41:54.5590317+01:00
+      Found key {db420dee-7a2d-4d02-ace2-10c9835217a4}.
+dbug: Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver[13] @ 2022-01-05T21:41:54.5632925+01:00
+      Considering key {fc1364d1-3133-48cb-ab41-911be5709b21} with expiration date 2022-03-27 09:21:49Z as default key.
+dbug: Microsoft.AspNetCore.DataProtection.TypeForwardingActivator[0] @ 2022-01-05T21:41:54.5687856+01:00
+      Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.19.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+dbug: Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory[11] @ 2022-01-05T21:41:54.5700215+01:00
+      Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+dbug: Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory[10] @ 2022-01-05T21:41:54.5700641+01:00
+      Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+dbug: Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider[2] @ 2022-01-05T21:41:54.5735435+01:00
+      Using key {fc1364d1-3133-48cb-ab41-911be5709b21} as the default key.
+dbug: Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService[0] @ 2022-01-05T21:41:54.5738813+01:00
+      Key ring with default key {fc1364d1-3133-48cb-ab41-911be5709b21} was loaded during application startup.
+dbug: Microsoft.AspNetCore.SignalR.Internal.DefaultHubProtocolResolver[RegisteredSignalRProtocol] @ 2022-01-05T21:41:54.6269251+01:00
+      Registered SignalR Protocol: json, implemented by Microsoft.AspNetCore.SignalR.Protocol.JsonHubProtocol.
+dbug: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer[FailedToLocateDevelopmentCertificateFile] @ 2022-01-05T21:41:54.6599162+01:00
+      Failed to locate the development https certificate at '(null)'.
+info: Microsoft.Hosting.Lifetime[0] @ 2022-01-05T21:41:54.6691784+01:00
+      Now listening on: http://0.0.0.0:2500
+dbug: Microsoft.AspNetCore.Hosting.Diagnostics[0] @ 2022-01-05T21:41:54.6692669+01:00
+      Loaded hosting startup assembly TML-ids
+info: Microsoft.Hosting.Lifetime[0] @ 2022-01-05T21:41:54.6705816+01:00
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0] @ 2022-01-05T21:41:54.6706184+01:00
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0] @ 2022-01-05T21:41:54.6706355+01:00
+      Content root path: /home/talel/Documents/ids/TML-ids/TML-ids
+dbug: Microsoft.Extensions.Hosting.Internal.Host[2] @ 2022-01-05T21:41:54.6706486+01:00
+      Hosting started
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionAccepted] @ 2022-01-05T21:42:10.6992437+01:00
+      Connection id "0HMEGHFCDNG1B" accepted.
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionStart] @ 2022-01-05T21:42:10.7002915+01:00
+      Connection id "0HMEGHFCDNG1B" started.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1] @ 2022-01-05T21:42:10.7178037+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId:
+      Request starting HTTP/1.1 POST http://localhost:2500/api/Home/AddRecord application/json 103
+dbug: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware[WildcardDetected] @ 2022-01-05T21:42:10.7215342+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId:
+      Wildcard detected, all requests with hosts will be allowed.
+dbug: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[MethodNotSupported] @ 2022-01-05T21:42:10.7323381+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId:
+      POST requests are not supported
+dbug: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[MethodNotSupported] @ 2022-01-05T21:42:10.7323909+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId:
+      POST requests are not supported
+dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[CandidatesFound] @ 2022-01-05T21:42:10.7499163+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId:
+      1 candidate(s) found for the request path '/api/Home/AddRecord'
+dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[CandiateValid] @ 2022-01-05T21:42:10.7529726+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId:
+      Endpoint 'TML_ids.Controllers.HomeController.AddRecord (TML-ids)' with route pattern 'api/Home/AddRecord' is valid for the request path '/api/Home/AddRecord'
+dbug: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware[MatchSuccess] @ 2022-01-05T21:42:10.7537309+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId:
+      Request matched endpoint 'TML_ids.Controllers.HomeController.AddRecord (TML-ids)'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[ExecutingEndpoint] @ 2022-01-05T21:42:10.7554354+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId:
+      Executing endpoint 'TML_ids.Controllers.HomeController.AddRecord (TML-ids)'
+dbug: Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory[RegisteredModelBinderProviders] @ 2022-01-05T21:42:10.7594777+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId:
+      Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[ControllerActionExecuting] @ 2022-01-05T21:42:10.7799623+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Route matched with {action = "AddRecord", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddRecord(TML_ids.Models.RecordAddModel) on controller TML_ids.Controllers.HomeController (TML-ids).
+dbug: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[FilterExecutionPlan] @ 2022-01-05T21:42:10.7807840+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Execution plan of authorization filters (in the following order): None
+dbug: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[FilterExecutionPlan] @ 2022-01-05T21:42:10.7809739+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter
+dbug: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[FilterExecutionPlan] @ 2022-01-05T21:42:10.7810779+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+dbug: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[FilterExecutionPlan] @ 2022-01-05T21:42:10.7811242+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Execution plan of exception filters (in the following order): None
+dbug: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[FilterExecutionPlan] @ 2022-01-05T21:42:10.7811768+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter, Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+dbug: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[ControllerFactoryExecuting] @ 2022-01-05T21:42:10.7819524+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Executing controller factory for controller TML_ids.Controllers.HomeController (TML-ids)
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[Microsoft.EntityFrameworkCore.Infrastructure.ServiceProviderCreated] @ 2022-01-05T21:42:10.8322310+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      An 'IServiceProvider' was created for internal use by Entity Framework.
+dbug: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[ControllerFactoryExecuted] @ 2022-01-05T21:42:10.8428978+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Executed controller factory for controller TML_ids.Controllers.HomeController (TML-ids)
+dbug: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder[AttemptingToBindParameter] @ 2022-01-05T21:42:10.8462186+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Attempting to bind parameter 'model' of type 'TML_ids.Models.RecordAddModel' ...
+dbug: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder[AttemptingToBindParameterModel] @ 2022-01-05T21:42:10.8475698+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Attempting to bind parameter 'model' of type 'TML_ids.Models.RecordAddModel' using the name '' in request data ...
+dbug: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder[InputFormatterSelected] @ 2022-01-05T21:42:10.8482380+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+dbug: Microsoft.AspNetCore.Server.Kestrel[RequestBodyStart] @ 2022-01-05T21:42:10.8527717+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Connection id "0HMEGHFCDNG1B", Request id "0HMEGHFCDNG1B:00000001": started reading request body.
+dbug: Microsoft.AspNetCore.Server.Kestrel[RequestBodyDone] @ 2022-01-05T21:42:10.8528561+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Connection id "0HMEGHFCDNG1B", Request id "0HMEGHFCDNG1B:00000001": done reading request body.
+dbug: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter[SystemTextJsonInputSuccess] @ 2022-01-05T21:42:10.8548973+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      JSON input formatter succeeded, deserializing to type 'TML_ids.Models.RecordAddModel'
+dbug: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder[DoneAttemptingToBindParameterModel] @ 2022-01-05T21:42:10.8550889+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Done attempting to bind parameter 'model' of type 'TML_ids.Models.RecordAddModel'.
+dbug: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder[DoneAttemptingToBindParameter] @ 2022-01-05T21:42:10.8551254+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Done attempting to bind parameter 'model' of type 'TML_ids.Models.RecordAddModel'.
+dbug: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder[AttemptingToValidateParameter] @ 2022-01-05T21:42:10.8551478+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Attempting to validate the bound parameter 'model' of type 'TML_ids.Models.RecordAddModel' ...
+dbug: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder[DoneAttemptingToValidateParameter] @ 2022-01-05T21:42:10.8601185+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Done attempting to validate the bound parameter 'model' of type 'TML_ids.Models.RecordAddModel'.
+info: Microsoft.EntityFrameworkCore.Infrastructure[Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized] @ 2022-01-05T21:42:11.1311670+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Entity Framework Core 3.1.22 initialized 'RecordContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+dbug: Microsoft.EntityFrameworkCore.ChangeTracking[Microsoft.EntityFrameworkCore.ChangeTracking.ValueGenerated] @ 2022-01-05T21:42:11.1560380+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      'RecordContext' generated a value for the 'Id' property of new 'Record' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: Microsoft.EntityFrameworkCore.ChangeTracking[Microsoft.EntityFrameworkCore.ChangeTracking.StartedTracking] @ 2022-01-05T21:42:11.1852884+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Context 'RecordContext' started tracking 'Record' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: Microsoft.EntityFrameworkCore.Update[Microsoft.EntityFrameworkCore.Update.SaveChangesStarting] @ 2022-01-05T21:42:11.1868196+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      SaveChanges starting for 'RecordContext'.
+dbug: Microsoft.EntityFrameworkCore.ChangeTracking[Microsoft.EntityFrameworkCore.ChangeTracking.DetectChangesStarting] @ 2022-01-05T21:42:11.1882257+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      DetectChanges starting for 'RecordContext'.
+dbug: Microsoft.EntityFrameworkCore.ChangeTracking[Microsoft.EntityFrameworkCore.ChangeTracking.DetectChangesCompleted] @ 2022-01-05T21:42:11.1954099+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      DetectChanges completed for 'RecordContext'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[Microsoft.EntityFrameworkCore.Database.Connection.ConnectionOpening] @ 2022-01-05T21:42:11.2144136+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Opening connection to database 'IDS' on server 'tcp://localhost:5432'.
+fail: Microsoft.EntityFrameworkCore.Database.Connection[Microsoft.EntityFrameworkCore.Database.Connection.ConnectionError] @ 2022-01-05T21:42:11.2469814+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      An error occurred using the connection to database 'IDS' on server 'tcp://localhost:5432'.
+fail: Microsoft.EntityFrameworkCore.Update[Microsoft.EntityFrameworkCore.Update.SaveChangesFailed] @ 2022-01-05T21:42:11.2636938+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      An exception occurred in the database while saving changes for context type 'TML_ids.Data.RecordContext'.
+      System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+       ---> Npgsql.NpgsqlException (0x80004005): Exception while connecting
+       ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (111): Connection refused 127.0.0.1:5432
+         at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+         at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+         at System.Net.Sockets.Socket.<>c.<ConnectAsync>b__274_0(IAsyncResult iar)
+      --- End of stack trace from previous location where exception was thrown ---
+         at Npgsql.TaskExtensions.WithCancellation(Task task, CancellationToken cancellationToken)
+         at Npgsql.TaskExtensions.WithTimeout(Task task, NpgsqlTimeout timeout)
+         at Npgsql.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+         at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+      --- End of stack trace from previous location where exception was thrown ---
+         at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+         --- End of inner exception stack trace ---
+         at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (111): Connection refused 127.0.0.1:5432
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.<>c.<ConnectAsync>b__274_0(IAsyncResult iar)
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.TaskExtensions.WithCancellation(Task task, CancellationToken cancellationToken)
+   at Npgsql.TaskExtensions.WithTimeout(Task task, NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[ActionExecuted] @ 2022-01-05T21:42:11.2747946+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Executed action TML_ids.Controllers.HomeController.AddRecord (TML-ids) in 491.3693ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[ExecutedEndpoint] @ 2022-01-05T21:42:11.2758218+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId:
+      Executed endpoint 'TML_ids.Controllers.HomeController.AddRecord (TML-ids)'
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[UnhandledException] @ 2022-01-05T21:42:11.2833627+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId:
+      An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (111): Connection refused 127.0.0.1:5432
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.<>c.<ConnectAsync>b__274_0(IAsyncResult iar)
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.TaskExtensions.WithCancellation(Task task, CancellationToken cancellationToken)
+   at Npgsql.TaskExtensions.WithTimeout(Task task, NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TML_ids.Data.RecordRepository.AddRecord(Record record) in /home/talel/Documents/ids/TML-ids/TML-ids/Data/RecordRepository.cs:line 33
+   at TML_ids.Controllers.HomeController.AddRecord(RecordAddModel model) in /home/talel/Documents/ids/TML-ids/TML-ids/Controllers/HomeController.cs:line 51
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionKeepAlive] @ 2022-01-05T21:42:11.2924004+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId:
+      Connection id "0HMEGHFCDNG1B" completed keep alive response.
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[Microsoft.EntityFrameworkCore.Infrastructure.ContextDisposed] @ 2022-01-05T21:42:11.2941012+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId:
+      'RecordContext' disposed.
+dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[ConnectionReadFin] @ 2022-01-05T21:42:11.2950473+01:00
+      Connection id "0HMEGHFCDNG1B" received FIN.
+dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[ConnectionWriteFin] @ 2022-01-05T21:42:11.2959573+01:00
+      => ConnectionId:0HMEGHFCDNG1B
+      Connection id "0HMEGHFCDNG1B" sending FIN because: "The client closed the connection."
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2] @ 2022-01-05T21:42:11.2959639+01:00
+      => ConnectionId:0HMEGHFCDNG1B => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1B:00000001, SpanId:|97861330-4639830482b197ab., TraceId:97861330-4639830482b197ab, ParentId:
+      Request finished in 579.7872ms 500 text/plain
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionDisconnect] @ 2022-01-05T21:42:11.2964448+01:00
+      => ConnectionId:0HMEGHFCDNG1B
+      Connection id "0HMEGHFCDNG1B" disconnecting.
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionStop] @ 2022-01-05T21:42:11.2979376+01:00
+      Connection id "0HMEGHFCDNG1B" stopped.
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionAccepted] @ 2022-01-05T21:42:12.3705971+01:00
+      Connection id "0HMEGHFCDNG1C" accepted.
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionStart] @ 2022-01-05T21:42:12.3710621+01:00
+      Connection id "0HMEGHFCDNG1C" started.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1] @ 2022-01-05T21:42:12.3734717+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId:
+      Request starting HTTP/1.1 POST http://localhost:2500/api/Home/AddRecord application/json 103
+dbug: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[MethodNotSupported] @ 2022-01-05T21:42:12.3751841+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId:
+      POST requests are not supported
+dbug: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[MethodNotSupported] @ 2022-01-05T21:42:12.3756465+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId:
+      POST requests are not supported
+dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[CandidatesFound] @ 2022-01-05T21:42:12.3780075+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId:
+      1 candidate(s) found for the request path '/api/Home/AddRecord'
+dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[CandiateValid] @ 2022-01-05T21:42:12.3781370+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId:
+      Endpoint 'TML_ids.Controllers.HomeController.AddRecord (TML-ids)' with route pattern 'api/Home/AddRecord' is valid for the request path '/api/Home/AddRecord'
+dbug: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware[MatchSuccess] @ 2022-01-05T21:42:12.3782116+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId:
+      Request matched endpoint 'TML_ids.Controllers.HomeController.AddRecord (TML-ids)'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[ExecutingEndpoint] @ 2022-01-05T21:42:12.3785387+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId:
+      Executing endpoint 'TML_ids.Controllers.HomeController.AddRecord (TML-ids)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[ControllerActionExecuting] @ 2022-01-05T21:42:12.3788524+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Route matched with {action = "AddRecord", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddRecord(TML_ids.Models.RecordAddModel) on controller TML_ids.Controllers.HomeController (TML-ids).
+dbug: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[FilterExecutionPlan] @ 2022-01-05T21:42:12.3789089+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Execution plan of authorization filters (in the following order): None
+dbug: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[FilterExecutionPlan] @ 2022-01-05T21:42:12.3789469+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter
+dbug: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[FilterExecutionPlan] @ 2022-01-05T21:42:12.3789763+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+dbug: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[FilterExecutionPlan] @ 2022-01-05T21:42:12.3789995+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Execution plan of exception filters (in the following order): None
+dbug: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[FilterExecutionPlan] @ 2022-01-05T21:42:12.3790206+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter, Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+dbug: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[ControllerFactoryExecuting] @ 2022-01-05T21:42:12.3791267+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Executing controller factory for controller TML_ids.Controllers.HomeController (TML-ids)
+dbug: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[ControllerFactoryExecuted] @ 2022-01-05T21:42:12.3796147+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Executed controller factory for controller TML_ids.Controllers.HomeController (TML-ids)
+dbug: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder[AttemptingToBindParameter] @ 2022-01-05T21:42:12.3798858+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Attempting to bind parameter 'model' of type 'TML_ids.Models.RecordAddModel' ...
+dbug: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder[AttemptingToBindParameterModel] @ 2022-01-05T21:42:12.3800575+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Attempting to bind parameter 'model' of type 'TML_ids.Models.RecordAddModel' using the name '' in request data ...
+dbug: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder[InputFormatterSelected] @ 2022-01-05T21:42:12.3801371+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+dbug: Microsoft.AspNetCore.Server.Kestrel[RequestBodyStart] @ 2022-01-05T21:42:12.3803100+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Connection id "0HMEGHFCDNG1C", Request id "0HMEGHFCDNG1C:00000001": started reading request body.
+dbug: Microsoft.AspNetCore.Server.Kestrel[RequestBodyDone] @ 2022-01-05T21:42:12.3804055+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Connection id "0HMEGHFCDNG1C", Request id "0HMEGHFCDNG1C:00000001": done reading request body.
+dbug: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter[SystemTextJsonInputSuccess] @ 2022-01-05T21:42:12.3810337+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      JSON input formatter succeeded, deserializing to type 'TML_ids.Models.RecordAddModel'
+dbug: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder[DoneAttemptingToBindParameterModel] @ 2022-01-05T21:42:12.3810930+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Done attempting to bind parameter 'model' of type 'TML_ids.Models.RecordAddModel'.
+dbug: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder[DoneAttemptingToBindParameter] @ 2022-01-05T21:42:12.3811115+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Done attempting to bind parameter 'model' of type 'TML_ids.Models.RecordAddModel'.
+dbug: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder[AttemptingToValidateParameter] @ 2022-01-05T21:42:12.3811316+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Attempting to validate the bound parameter 'model' of type 'TML_ids.Models.RecordAddModel' ...
+dbug: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder[DoneAttemptingToValidateParameter] @ 2022-01-05T21:42:12.3814132+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Done attempting to validate the bound parameter 'model' of type 'TML_ids.Models.RecordAddModel'.
+info: Microsoft.EntityFrameworkCore.Infrastructure[Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized] @ 2022-01-05T21:42:12.4014816+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Entity Framework Core 3.1.22 initialized 'RecordContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+dbug: Microsoft.EntityFrameworkCore.ChangeTracking[Microsoft.EntityFrameworkCore.ChangeTracking.ValueGenerated] @ 2022-01-05T21:42:12.4021396+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      'RecordContext' generated a value for the 'Id' property of new 'Record' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: Microsoft.EntityFrameworkCore.ChangeTracking[Microsoft.EntityFrameworkCore.ChangeTracking.StartedTracking] @ 2022-01-05T21:42:12.4024598+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Context 'RecordContext' started tracking 'Record' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: Microsoft.EntityFrameworkCore.Update[Microsoft.EntityFrameworkCore.Update.SaveChangesStarting] @ 2022-01-05T21:42:12.4025021+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      SaveChanges starting for 'RecordContext'.
+dbug: Microsoft.EntityFrameworkCore.ChangeTracking[Microsoft.EntityFrameworkCore.ChangeTracking.DetectChangesStarting] @ 2022-01-05T21:42:12.4025536+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      DetectChanges starting for 'RecordContext'.
+dbug: Microsoft.EntityFrameworkCore.ChangeTracking[Microsoft.EntityFrameworkCore.ChangeTracking.DetectChangesCompleted] @ 2022-01-05T21:42:12.4026753+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      DetectChanges completed for 'RecordContext'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[Microsoft.EntityFrameworkCore.Database.Connection.ConnectionOpening] @ 2022-01-05T21:42:12.4029290+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Opening connection to database 'IDS' on server 'tcp://localhost:5432'.
+fail: Microsoft.EntityFrameworkCore.Database.Connection[Microsoft.EntityFrameworkCore.Database.Connection.ConnectionError] @ 2022-01-05T21:42:12.4043587+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      An error occurred using the connection to database 'IDS' on server 'tcp://localhost:5432'.
+fail: Microsoft.EntityFrameworkCore.Update[Microsoft.EntityFrameworkCore.Update.SaveChangesFailed] @ 2022-01-05T21:42:12.4093567+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      An exception occurred in the database while saving changes for context type 'TML_ids.Data.RecordContext'.
+      System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+       ---> Npgsql.NpgsqlException (0x80004005): Exception while connecting
+       ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (111): Connection refused 127.0.0.1:5432
+         at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+         at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+         at System.Net.Sockets.Socket.<>c.<ConnectAsync>b__274_0(IAsyncResult iar)
+      --- End of stack trace from previous location where exception was thrown ---
+         at Npgsql.TaskExtensions.WithCancellation(Task task, CancellationToken cancellationToken)
+         at Npgsql.TaskExtensions.WithTimeout(Task task, NpgsqlTimeout timeout)
+         at Npgsql.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+         at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+      --- End of stack trace from previous location where exception was thrown ---
+         at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+         --- End of inner exception stack trace ---
+         at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (111): Connection refused 127.0.0.1:5432
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.<>c.<ConnectAsync>b__274_0(IAsyncResult iar)
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.TaskExtensions.WithCancellation(Task task, CancellationToken cancellationToken)
+   at Npgsql.TaskExtensions.WithTimeout(Task task, NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[ActionExecuted] @ 2022-01-05T21:42:12.4152601+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId: => TML_ids.Controllers.HomeController.AddRecord (TML-ids)
+      Executed action TML_ids.Controllers.HomeController.AddRecord (TML-ids) in 36.2074ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[ExecutedEndpoint] @ 2022-01-05T21:42:12.4153655+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId:
+      Executed endpoint 'TML_ids.Controllers.HomeController.AddRecord (TML-ids)'
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[UnhandledException] @ 2022-01-05T21:42:12.4182898+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId:
+      An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (111): Connection refused 127.0.0.1:5432
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.<>c.<ConnectAsync>b__274_0(IAsyncResult iar)
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.TaskExtensions.WithCancellation(Task task, CancellationToken cancellationToken)
+   at Npgsql.TaskExtensions.WithTimeout(Task task, NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TML_ids.Data.RecordRepository.AddRecord(Record record) in /home/talel/Documents/ids/TML-ids/TML-ids/Data/RecordRepository.cs:line 33
+   at TML_ids.Controllers.HomeController.AddRecord(RecordAddModel model) in /home/talel/Documents/ids/TML-ids/TML-ids/Controllers/HomeController.cs:line 51
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionKeepAlive] @ 2022-01-05T21:42:12.4266893+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId:
+      Connection id "0HMEGHFCDNG1C" completed keep alive response.
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[Microsoft.EntityFrameworkCore.Infrastructure.ContextDisposed] @ 2022-01-05T21:42:12.4267551+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId:
+      'RecordContext' disposed.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2] @ 2022-01-05T21:42:12.4268376+01:00
+      => ConnectionId:0HMEGHFCDNG1C => RequestPath:/api/Home/AddRecord RequestId:0HMEGHFCDNG1C:00000001, SpanId:|97861331-4639830482b197ab., TraceId:97861331-4639830482b197ab, ParentId:
+      Request finished in 53.3618ms 500 text/plain
+dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[ConnectionReadFin] @ 2022-01-05T21:42:12.4276939+01:00
+      Connection id "0HMEGHFCDNG1C" received FIN.
+dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[ConnectionWriteFin] @ 2022-01-05T21:42:12.4278739+01:00
+      => ConnectionId:0HMEGHFCDNG1C
+      Connection id "0HMEGHFCDNG1C" sending FIN because: "The client closed the connection."
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionDisconnect] @ 2022-01-05T21:42:12.4279715+01:00
+      => ConnectionId:0HMEGHFCDNG1C
+      Connection id "0HMEGHFCDNG1C" disconnecting.
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionStop] @ 2022-01-05T21:42:12.4281638+01:00
+      Connection id "0HMEGHFCDNG1C" stopped.
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionAccepted] @ 2022-01-05T21:42:13.5264335+01:00
+      Connection id "0HMEGHFCDNG1D" accepted.
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionStart] @ 2022-01-05T21:42:13.5267837+01:00
+      Connection id "0HMEGHFCDNG1D" started.
+dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[ConnectionReset] @ 2022-01-05T21:42:13.5297550+01:00
+      Connection id "0HMEGHFCDNG1D" reset.
+dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[ConnectionWriteFin] @ 2022-01-05T21:42:13.5304246+01:00
+      => ConnectionId:0HMEGHFCDNG1D
+      Connection id "0HMEGHFCDNG1D" sending FIN because: "The client closed the connection."
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionDisconnect] @ 2022-01-05T21:42:13.5307302+01:00
+      => ConnectionId:0HMEGHFCDNG1D
+      Connection id "0HMEGHFCDNG1D" disconnecting.
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionStop] @ 2022-01-05T21:42:13.5309446+01:00
+      Connection id "0HMEGHFCDNG1D" stopped.
