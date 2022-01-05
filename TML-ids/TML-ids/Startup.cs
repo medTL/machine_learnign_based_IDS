@@ -67,7 +67,7 @@ namespace TML_ids
             app.UseStaticFiles();
 
             app.UseRouting();
-            app.UseCors(builder => builder.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+            app.UseCors(builder => builder.WithOrigins("http://51.178.169.197:3000").AllowAnyMethod().AllowAnyHeader().AllowCredentials());
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {

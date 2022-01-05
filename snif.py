@@ -139,7 +139,7 @@ def live(interface):
         classify(f.terminated())
         
 def SendRecord(data):
-    url = "http://localhost:2500/api/Home/AddRecord"
+    url = "http://51.178.169.197:2500/api/Home/AddRecord"
     headers = {'Content-type': 'application/json'}
     payload = vars(data)
     print(payload)
