@@ -7,7 +7,7 @@ import RecordTileLineItem from "./RecordTileLineItem"
 function RecordTimeLine() {
   const [RecordItems, setRecordItems] = useState([])
   const latestRecords = useRef(null)
-  latestRecords.current = RecordItems;
+  latestRecords.current = RecordItems
   const [connection, setConnection] = useState(null)
   useEffect(() => {
     const newConnection = new HubConnectionBuilder()
@@ -19,20 +19,22 @@ function RecordTimeLine() {
   }, [])
   useEffect(() => {
     if (connection) {
-        connection.start()
-            .then(result => {
-                console.log('Connected!');
+      connection
+        .start()
+        .then((result) => {
+          console.log("Connected!")
 
-                connection.on('ReceiveRecord', record => {
-                    const updatedRecord = [...latestRecords.current]
-                    updatedRecord.push(record)
-                    setRecordItems(updatedRecord);
-                });
-            })
-            .catch(e => console.log('Connection failed: ', e));
+          connection.on("ReceiveRecord", (record) => {
+            const updatedRecord = [...latestRecords.current]
+            updatedRecord.push(record)
+            setRecordItems(updatedRecord)
+          })
+        })
+        .catch((e) => console.log("Connection failed: ", e))
     }
-}, [connection]);
-
+  }, [connection])
+if(RecordItems.length > 0)
+{
   return (
     <div className="timeLine-container">
       <VerticalTimeline>
@@ -40,8 +42,15 @@ function RecordTimeLine() {
           <RecordTileLineItem Record={item} />
         ))}
       </VerticalTimeline>
+     
     </div>
   )
+} else {
+ return( <div className="timeLine-container">
+    <h3 className="timeLine-nodata">No Data</h3>
+  </div>)
+}
+  
 }
 
 export default RecordTimeLine
