@@ -8,18 +8,19 @@ import HomePage from "./components/HomePage";
 
 function App() {
   return (
-    <Container>
+  
     <div className="App">
-    
      <BrowserRouter>
      <Header />
+     <Container>
      <Routes>
        <Route exact path="/" element={<HomePage/>}/>
        <Route path="/History"  element={<HistoryPage/>}/>
        </Routes>
+       </Container>
      </BrowserRouter>
     </div>
-    </Container>
+
   );
 }
 

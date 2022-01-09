@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TML_ids.BL;
 using TML_ids.Data;
 
 namespace TML_ids
@@ -67,7 +68,7 @@ namespace TML_ids
             app.UseStaticFiles();
 
             app.UseRouting();
-            app.UseCors(builder => builder.WithOrigins("http://51.178.169.197:3000").AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+            app.UseCors(builder => builder.WithOrigins(Tools.GetEnvString("WEB_SOCKET")).AllowAnyMethod().AllowAnyHeader().AllowCredentials());
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {

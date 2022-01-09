@@ -12,7 +12,7 @@ namespace TML_ids.Data
             var query = RecordTrueQuery;
             if (!string.IsNullOrWhiteSpace(filter.Attack))
             {
-               query = query.Or(record => record.Label.ToLower()
+               query = query.And(record => record.Label.ToLower()
                    .Trim().Contains(filter.Attack.ToLower().Trim()));
             }
 

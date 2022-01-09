@@ -2,7 +2,6 @@ import React, {useEffect, useRef, useState} from "react"
 import {RecordFilterModel} from "../Models/RecordFilterModel"
 import {clearDatabase, DeleteRecord, getRecords} from "../api/apiService"
 import {Table} from "react-bootstrap"
-import {Record} from "../Models/Record"
 import moment from "moment"
 import {toast, ToastContainer} from "react-toastify"
 import TextField from "@mui/material/TextField"
@@ -11,12 +10,14 @@ import AdapterDateFns from "@mui/lab/AdapterDateFns"
 import LocalizationProvider from "@mui/lab/LocalizationProvider"
 import Box from "@mui/material/Box"
 import Select from "@mui/material/Select"
-import {createTheme, ThemeProvider, styled} from "@mui/material/styles"
+import {createTheme, ThemeProvider} from "@mui/material/styles"
 import MenuItem from "@mui/material/MenuItem"
 import {Button, FormControl, InputLabel} from "@mui/material"
-import { fil } from "date-fns/locale"
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import {Audio, Bars, Circles, Rings} from "react-loader-spinner"
 function HistoryPage() {
   const [Records, setRecords] = useState([])
+  const [loading, setLoading] = useState(true)
   const [dateRange, setDateRange] = useState([null, null])
   const [attack, setAttack] = useState("")
   const [filter, setFilter] = useState(new RecordFilterModel(null, null, ""))
@@ -30,11 +31,13 @@ function HistoryPage() {
   useEffect(() => {
     async function fetchData() {
       const request = await getRecords(filter)
-      console.log(request)
+
       if (request.data.error === null) {
         setRecords(request.data.data)
+        setLoading(false)
       } else {
         toast.error("Server error!")
+        setLoading(false)
       }
 
       return request
@@ -42,18 +45,14 @@ function HistoryPage() {
     fetchData()
   }, [filter])
 
-    
-    async function clearDatabaseHandler() {
-      const request = await clearDatabase();
-      if(request.data.error === null)
-      {
-        toast.success("Database cleared succesfully!")
-      }else {
-        toast.error("Fail to clear database!")
-      }
+  async function clearDatabaseHandler() {
+    const request = await clearDatabase()
+    if (request.data.error === null) {
+      toast.success("Database cleared succesfully!")
+    } else {
+      toast.error("Fail to clear database!")
     }
- 
-
+  }
 
   async function DeleteRecordHandler(id) {
     setRecords(Records.filter((x) => x.id !== id))
@@ -68,7 +67,7 @@ function HistoryPage() {
   function handDateChange(value) {
     setDateRange(value)
     const updateFilter = {
-      ...refFilter,
+      ...refFilter.current,
       fromDate: value[0],
       toDate: value[1],
     }
@@ -80,7 +79,7 @@ function HistoryPage() {
     console.log(selectedAttack)
     setAttack(selectedAttack)
     const updateFilter = {
-      ...refFilter,
+      ...refFilter.current,
       attack: selectedAttack,
     }
     setFilter(updateFilter)
@@ -92,19 +91,17 @@ function HistoryPage() {
       attack: "",
     })
     setDateRange([null, null])
-    setAttack("");
+    setAttack("")
   }
 
-  function filterChanged(filter)
-  {
-    
-    return filter.fromDate === null && 
-    filter.toDate === null
-    && filter.attack === "";
+  function filterChanged(filter) {
+    return (
+      filter.fromDate === null && filter.toDate === null && filter.attack === ""
+    )
   }
 
   return (
-    <div>
+    <div className="historyPage">
       <ThemeProvider theme={darkTheme}>
         <ToastContainer
           position="top-right"
@@ -128,9 +125,9 @@ function HistoryPage() {
               }}
               renderInput={(startProps, endProps) => (
                 <React.Fragment>
-                  <TextField {...startProps} />
+                  <TextField autoComplete="false" {...startProps} />
                   <Box sx={{mx: 1}}> to </Box>
-                  <TextField {...endProps} />
+                  <TextField autoComplete="false" {...endProps} />
                 </React.Fragment>
               )}
             />
@@ -154,18 +151,24 @@ function HistoryPage() {
             </FormControl>
           </Box>
           <div className="actions-buttons">
-            { !filterChanged(filter) && <Button color="error" onClick={ResetFilter}  variant="outlined">
-              <i className="fas fa-times-circle pr-2"></i>
-              Reset filter
-            </Button> }
-            <Button onClick={clearDatabaseHandler} color="error" variant="contained">
+            {!filterChanged(filter) && (
+              <Button color="error" onClick={ResetFilter} variant="outlined">
+                <i className="fas fa-times-circle pr-2"></i>
+                Reset filter
+              </Button>
+            )}
+            <Button
+              onClick={clearDatabaseHandler}
+              color="error"
+              variant="contained"
+            >
               Clear database
             </Button>
           </div>
         </div>
         <div className="history_table-wrapper">
           <div className="table-responsive history_table ">
-            <Table bordered hover variant="dark">
+            <Table  bordered hover variant="dark">
               <thead>
                 <tr>
                   <th>Source ip</th>
@@ -196,7 +199,19 @@ function HistoryPage() {
                 ))}
               </tbody>
             </Table>
-            {Records.length <= 0 && (
+                  {loading && (
+                     <Bars
+                     wrapperClass="loader"
+                     heigth="100"
+                     width="100"
+                     color="grey"
+                     arialLabel="loading"
+                     
+                   />
+                  )}
+             
+      
+            {Records.length <= 0 && !loading && (
               <div className="empty_data_message">No Data!</div>
             )}
           </div>

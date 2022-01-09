@@ -11,6 +11,10 @@ from RecordModel import Record
 import json
 from flow.Flow import Flow
 from flow.PacketInfo import PacketInfo
+from dotenv import load_dotenv
+load_dotenv()
+import os
+URL = os.environ.get("base-url")
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -22,8 +26,9 @@ current_flows = {}
 FlowTimeout = 600
 global normalisation
 global classifier
+record = None
 
-def classify(features, packet = None):
+def classify(features):
 
     # preprocess
     f = features
@@ -39,12 +44,12 @@ def classify(features, packet = None):
     classification = [str(result[0])]
    # print(feature_string + classification)
     if result != 'Benign':
-        print(" Detected "+ result +" attack from :["+ packet.src+"]")
-        record = Record(sourceIp = packet.src,
-                        destinationIp = packet.dest,
-                        destinationPort = str(packet.dest_port),
+        print(" Detected "+ result +" attack from :["+ record.src+"]")
+        newRecord = Record(sourceIp = record.src,
+                        destinationIp = record.dest,
+                        destinationPort = str(record.dest_port),
                         label = result[0])
-        SendRecord(record)
+        SendRecord(newRecord)
         time.sleep(1)
        
 
@@ -82,7 +87,7 @@ def newPacket(p):
             # check for timeout
             # for some reason they only do it if packet count > 1
             if (packet.getTimestamp() - flow.getFlowStartTime()) > FlowTimeout:
-                classify(flow.terminated(), packet)
+                classify(flow.terminated())
                 del current_flows[packet.getFwdID()]
                 flow = Flow(packet)
                 current_flows[packet.getFwdID()] = flow
@@ -90,7 +95,7 @@ def newPacket(p):
             # check for fin flag
             elif packet.getFINFlag() or packet.getRSTFlag():
                 flow.new(packet, 'fwd')
-                classify(flow.terminated(), packet)
+                classify(flow.terminated())
                 del current_flows[packet.getFwdID()]
                 del flow
 
@@ -103,7 +108,7 @@ def newPacket(p):
 
             # check for timeout
             if (packet.getTimestamp() - flow.getFlowStartTime()) > FlowTimeout:
-                classify(flow.terminated(), packet)
+                classify(flow.terminated())
                 del current_flows[packet.getBwdID()]
                 del flow
                 flow = Flow(packet)
@@ -111,7 +116,7 @@ def newPacket(p):
 
             elif packet.getFINFlag() or packet.getRSTFlag():
                 flow.new(packet, 'bwd')
-                classify(flow.terminated(), packet)
+                classify(flow.terminated())
                 del current_flows[packet.getBwdID()]
                 del flow
             else:
@@ -120,6 +125,8 @@ def newPacket(p):
         else:
 
             flow = Flow(packet)
+            global record
+            record = packet
             current_flows[packet.getFwdID()] = flow
             # current flows put id, (new) flow
 
@@ -139,7 +146,7 @@ def live(interface):
         classify(f.terminated())
         
 def SendRecord(data):
-    url = "http://51.178.169.197:2500/api/Home/AddRecord"
+    url = URL + "/api/Home/AddRecord"
     headers = {'Content-type': 'application/json'}
     payload = vars(data)
     print(payload)

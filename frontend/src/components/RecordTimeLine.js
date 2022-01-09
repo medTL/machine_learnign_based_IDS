@@ -9,9 +9,11 @@ function RecordTimeLine() {
   const latestRecords = useRef(null)
   latestRecords.current = RecordItems
   const [connection, setConnection] = useState(null)
+  const baseUrl = process.env.REACT_APP_API_URL;
   useEffect(() => {
+    console.log(baseUrl);
     const newConnection = new HubConnectionBuilder()
-      .withUrl("http://localhost:2500/RecordsHub")
+      .withUrl(baseUrl + "/RecordsHub")
       .withAutomaticReconnect()
       .build()
 
@@ -25,6 +27,7 @@ function RecordTimeLine() {
           console.log("Connected!")
 
           connection.on("ReceiveRecord", (record) => {
+            console.log("NEW RECORD!")
             const updatedRecord = [...latestRecords.current]
             updatedRecord.push(record)
             setRecordItems(updatedRecord)
@@ -36,19 +39,29 @@ function RecordTimeLine() {
 if(RecordItems.length > 0)
 {
   return (
+    <div className="realTime-view">
+      <h4>Real Time Monitoring</h4> 
     <div className="timeLine-container">
+      
       <VerticalTimeline>
-        {RecordItems.map((item) => (
+        {RecordItems.map((item) => (  
           <RecordTileLineItem Record={item} />
         ))}
       </VerticalTimeline>
      
     </div>
+          
+    </div>
   )
 } else {
- return( <div className="timeLine-container">
+ return( 
+  <div className="realTime-view">
+  <h3>Real Time Monitoring</h3> 
+ <div className="timeLine-container">
     <h3 className="timeLine-nodata">No Data</h3>
-  </div>)
+  </div>
+  </div>
+  )
 }
   
 }
