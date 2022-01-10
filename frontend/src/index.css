@@ -191,6 +191,7 @@ table {
   display: grid;
   place-items: center;
   clip-path: polygon(13% 0, 100% 0, 100% 83%, 86% 100%, 0 100%, 0 19%);
+  overflow-y: scroll;
 
 }
 table, tr, th 
