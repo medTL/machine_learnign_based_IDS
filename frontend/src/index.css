@@ -208,7 +208,7 @@ tbody tr  {
   color: var(--primary-varient);
 }
 .loader {
-  position: absolute;
+  position: absolute !important;
   left: 50%;
   top: 50%;
   margin-top: -50px;
@@ -242,9 +242,9 @@ tbody tr  {
   width: 70%;
   height: 100%;
 }
-.realTime-view h3 {
-  color: var(--primary);
-  font-weight: 900;
+.realTime-view .realTime-view-title {
+  color: var(--primary) !important;
+  font-weight: 900 !important;
 
 }
 .actions-buttons {

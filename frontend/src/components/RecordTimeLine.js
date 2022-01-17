@@ -40,7 +40,7 @@ if(RecordItems.length > 0)
 {
   return (
     <div className="realTime-view">
-      <h4>Real Time Monitoring</h4> 
+     <h3 className="realTime-view-title">Real Time Monitoring</h3> 
     <div className="timeLine-container">
       
       <VerticalTimeline>
@@ -56,7 +56,7 @@ if(RecordItems.length > 0)
 } else {
  return( 
   <div className="realTime-view">
-  <h3>Real Time Monitoring</h3> 
+  <h3 className="realTime-view-title">Real Time Monitoring</h3> 
  <div className="timeLine-container">
     <h3 className="timeLine-nodata">No Data</h3>
   </div>

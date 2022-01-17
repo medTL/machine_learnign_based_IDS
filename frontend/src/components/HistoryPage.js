@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react"
+import React, {useCallback, useEffect, useRef, useState} from "react"
 import {RecordFilterModel} from "../Models/RecordFilterModel"
 import {clearDatabase, DeleteRecord, getRecords} from "../api/apiService"
 import {Table} from "react-bootstrap"
@@ -14,56 +14,59 @@ import {createTheme, ThemeProvider} from "@mui/material/styles"
 import MenuItem from "@mui/material/MenuItem"
 import {Button, FormControl, InputLabel} from "@mui/material"
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
-import {Audio, Bars, Circles, Rings} from "react-loader-spinner"
+import {Bars} from "react-loader-spinner"
+
+import useScrollHandlerHook from "./scrollHandlerHook"
 function HistoryPage() {
-  const [Records, setRecords] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [id, setId] = useState(null)
   const [dateRange, setDateRange] = useState([null, null])
   const [attack, setAttack] = useState("")
-  const [filter, setFilter] = useState(new RecordFilterModel(null, null, ""))
-  const refFilter = useRef(null)
-  refFilter.current = filter
+  const [filter, setFilter] = useState(
+    new RecordFilterModel(null, null, "", 0, 30)
+  )
   const darkTheme = createTheme({
     palette: {
       mode: "dark",
     },
   })
-  useEffect(() => {
-    async function fetchData() {
-      const request = await getRecords(filter)
+  const refFilter = useRef(null)
+  refFilter.current = filter
 
-      if (request.data.error === null) {
-        setRecords(request.data.data)
-        setLoading(false)
-      } else {
-        toast.error("Server error!")
-        setLoading(false)
-      }
+  const {loading, error, Records, count, hasMore} = useScrollHandlerHook(
+    filter,
+    id
+  )
 
-      return request
-    }
-    fetchData()
-  }, [filter])
+  const observer = useRef()
+  const lastRecordElementRef = useCallback(
+    (node) => {
+      if (loading) return
+      if (observer.current) observer.current.disconnect()
+      observer.current = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && hasMore) {
+          const updateFilter = {
+            ...refFilter.current,
+            start: refFilter.current.start + 30,
+          }
+
+          setFilter(updateFilter)
+        }
+      })
+      if (node) observer.current.observe(node)
+    },
+    [loading, hasMore]
+  )
 
   async function clearDatabaseHandler() {
     const request = await clearDatabase()
     if (request.data.error === null) {
       toast.success("Database cleared succesfully!")
+        ResetFilter();
     } else {
       toast.error("Fail to clear database!")
     }
   }
 
-  async function DeleteRecordHandler(id) {
-    setRecords(Records.filter((x) => x.id !== id))
-    const deleteRequest = await DeleteRecord(id)
-    console.log(deleteRequest)
-    if (deleteRequest.data.error === null) {
-      toast.success("Record deleted successfully!")
-    } else {
-      toast.error("Record delete failed!")
-    }
-  }
   function handDateChange(value) {
     setDateRange(value)
     const updateFilter = {
@@ -98,6 +101,9 @@ function HistoryPage() {
     return (
       filter.fromDate === null && filter.toDate === null && filter.attack === ""
     )
+  }
+  function DeleteRecordHandler(id) {
+    setId(id)
   }
 
   return (
@@ -168,7 +174,7 @@ function HistoryPage() {
         </div>
         <div className="history_table-wrapper">
           <div className="table-responsive history_table ">
-            <Table  bordered hover variant="dark">
+            <Table bordered hover variant="dark">
               <thead>
                 <tr>
                   <th>Source ip</th>
@@ -180,38 +186,62 @@ function HistoryPage() {
                 </tr>
               </thead>
               <tbody>
-                {Records.map((record) => (
-                  <tr key={record.id}>
-                    <td>{record.sourceIp}</td>
-                    <td>{record.destinationIp}</td>
-                    <td>{record.destinationPort}</td>
-                    <td>{record.label}</td>
-                    <td>
-                      {moment(record.createdAt).format("yyyy DD MM: HH:mm")}
-                    </td>
-                    <td>
-                      <i
-                        onClick={() => DeleteRecordHandler(record.id)}
-                        className="fas fa-trash-alt cursor"
-                      ></i>
-                    </td>
-                  </tr>
-                ))}
+                {Records.map((record, index) => {
+                  if (Records.length === index + 1) {
+                    return (
+                      <tr ref={lastRecordElementRef} key={record.id}>
+                        <td>{record.sourceIp}</td>
+                        <td>{record.destinationIp}</td>
+                        <td>{record.destinationPort}</td>
+                        <td>{record.label}</td>
+                        <td>
+                          {moment(record.createdAt).format("yyyy DD MM: HH:mm")}
+                        </td>
+                        <td>
+                          <i
+                            onClick={() => DeleteRecordHandler(record.id)}
+                            className="fas fa-trash-alt cursor"
+                          ></i>
+                        </td>
+                      </tr>
+                    )
+                  } else {
+                    return (
+                      <tr key={record.id}>
+                        <td>{record.sourceIp}</td>
+                        <td>{record.destinationIp}</td>
+                        <td>{record.destinationPort}</td>
+                        <td>{record.label}</td>
+                        <td>
+                          {moment(record.createdAt).format("yyyy DD MM: HH:mm")}
+                        </td>
+                        <td>
+                          <i
+                            onClick={() => DeleteRecordHandler(record.id)}
+                            className="fas fa-trash-alt cursor"
+                          ></i>
+                        </td>
+                      </tr>
+                    )
+                  }
+                })}
               </tbody>
             </Table>
-                  {loading && (
-                     <Bars
-                     wrapperClass="loader"
-                     heigth="100"
-                     width="100"
-                     color="grey"
-                     arialLabel="loading"
-                     
-                   />
-                  )}
-             
-      
+            {loading && !error &&  (
+              <Bars
+                wrapperClass="loader"
+                heigth="100"
+                width="100"
+                color="grey"
+                arialLabel="loading"
+              />
+            )}
+
             {Records.length <= 0 && !loading && (
+              <div className="empty_data_message">No Data!</div>
+            )}
+
+            {error && (
               <div className="empty_data_message">No Data!</div>
             )}
           </div>

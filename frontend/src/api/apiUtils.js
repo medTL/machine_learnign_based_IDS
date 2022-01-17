@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export async function handleResponse(response) {
 
     if (response.statusText === "OK") return response;
@@ -15,4 +17,15 @@ export async function handleResponse(response) {
     // eslint-disable-next-line no-console
     console.error("API call failed. " + error);
     throw error;
+  }
+
+  export function handleGetRecordsError(error) {
+    
+   if(axios.isCancel(error)) 
+   {
+    console.error("Cancel request");
+     return
+   }
+    console.error("Record list fail: " + error);
+    return error;
   }

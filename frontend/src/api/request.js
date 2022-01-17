@@ -6,4 +6,5 @@ export const apiRequest = {
     updateRecord : "/api/Home/UpdateRecord",
     deleteRecord : "/api/Home/DeleteRecord",
     clearDatabase : "/api/Home/ClearDatabase",
+    countRecord: "/api/Home/Count",
 } 

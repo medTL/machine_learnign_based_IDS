@@ -126,9 +126,15 @@ namespace TML_ids.Controllers
                 Message = "Database cleared !!"
             });
         }
-
-   
-
-       
+        
+        [HttpGet]
+        public async Task<IActionResult> CountAsync()
+        {
+            return Ok(new ServerResponse<int>
+            {
+                Data = await _recordRepository.RecordsCount(),
+                Message = "Records count"
+            });
+        }
     }
 }

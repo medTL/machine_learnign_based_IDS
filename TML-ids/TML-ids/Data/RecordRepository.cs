@@ -19,6 +19,8 @@ namespace TML_ids.Data
         public async Task<IEnumerable<Record>> ListRecords(RecordFilterModel model)
         {
             return await _context.Records.OrderByDescending(m => m.CreatedAt)
+                .Skip(model.Start)
+                .Take(model.PerPage)
                 .Where(RecordsPredicate.RecordByFilter(model)).ToListAsync();
         }
 
@@ -58,6 +60,11 @@ namespace TML_ids.Data
             var records = from c in _context.Records select c;
             _context.Records.RemoveRange(records);
             return _context.SaveChangesAsync();
+        }
+
+        public Task<int> RecordsCount()
+        {
+            return _context.Records.CountAsync();
         }
     }
 }

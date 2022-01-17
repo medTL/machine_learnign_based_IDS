@@ -18,5 +18,7 @@ namespace TML_ids.Data
         Task DeleteRecord(Record record);
         
         Task ClearRecords();
+
+        Task<int> RecordsCount();
     }
 }
