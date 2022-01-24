@@ -73,18 +73,19 @@ function HistoryPage() {
       ...refFilter.current,
       fromDate: value[0],
       toDate: value[1],
+      start: 0,
     }
 
     setFilter(updateFilter)
   }
   function handleAttackChange(event) {
     let selectedAttack = event.target.value
-    console.log(selectedAttack)
-    setAttack(selectedAttack)
     const updateFilter = {
       ...refFilter.current,
-      attack: selectedAttack,
+      attack: selectedAttack === "ALL" ? "" : selectedAttack,
+      start: 0,
     }
+    setAttack(selectedAttack)
     setFilter(updateFilter)
   }
   function ResetFilter() {
@@ -92,6 +93,8 @@ function HistoryPage() {
       fromDate: null,
       toDate: null,
       attack: "",
+      start:0,
+      perPage: 30,
     })
     setDateRange([null, null])
     setAttack("")
@@ -102,7 +105,9 @@ function HistoryPage() {
       filter.fromDate === null && filter.toDate === null && filter.attack === ""
     )
   }
+
   function DeleteRecordHandler(id) {
+    console.log(id);
     setId(id)
   }
 
@@ -148,6 +153,7 @@ function HistoryPage() {
                 label="Attack type"
                 onChange={handleAttackChange}
               >
+                 <MenuItem value={"ALL"}>ALL</MenuItem>
                 <MenuItem value={"Dos"}>Dos</MenuItem>
                 <MenuItem value={"Probe"}>Probe</MenuItem>
                 <MenuItem value={"Web Attack"}>Web Attack</MenuItem>
@@ -185,21 +191,22 @@ function HistoryPage() {
                   <th></th>
                 </tr>
               </thead>
-              <tbody>
+             { !loading &&  <tbody>
                 {Records.map((record, index) => {
-                  if (Records.length === index + 1) {
+
+                  if (Records.length === index + 1 && Records.length >= 30) {
                     return (
                       <tr ref={lastRecordElementRef} key={record.id}>
-                        <td>{record.sourceIp}</td>
+                        <td> {record.sourceIp}</td>
                         <td>{record.destinationIp}</td>
                         <td>{record.destinationPort}</td>
                         <td>{record.label}</td>
                         <td>
                           {moment(record.createdAt).format("yyyy DD MM: HH:mm")}
                         </td>
-                        <td>
+                        <td  onClick={() => DeleteRecordHandler(record.id)}>
                           <i
-                            onClick={() => DeleteRecordHandler(record.id)}
+                             
                             className="fas fa-trash-alt cursor"
                           ></i>
                         </td>
@@ -215,9 +222,9 @@ function HistoryPage() {
                         <td>
                           {moment(record.createdAt).format("yyyy DD MM: HH:mm")}
                         </td>
-                        <td>
+                        <td  onClick={() => DeleteRecordHandler(record.id)}>
                           <i
-                            onClick={() => DeleteRecordHandler(record.id)}
+                            
                             className="fas fa-trash-alt cursor"
                           ></i>
                         </td>
@@ -225,7 +232,7 @@ function HistoryPage() {
                     )
                   }
                 })}
-              </tbody>
+              </tbody>}
             </Table>
             {loading && !error &&  (
               <Bars

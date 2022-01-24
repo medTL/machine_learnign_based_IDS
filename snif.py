@@ -108,7 +108,7 @@ def newPacket(p):
 
             # check for timeout
             if (packet.getTimestamp() - flow.getFlowStartTime()) > FlowTimeout:
-                classify(flow.terminated())
+                #classify(flow.terminated())
                 del current_flows[packet.getBwdID()]
                 del flow
                 flow = Flow(packet)
@@ -116,7 +116,7 @@ def newPacket(p):
 
             elif packet.getFINFlag() or packet.getRSTFlag():
                 flow.new(packet, 'bwd')
-                classify(flow.terminated())
+                #classify(flow.terminated())
                 del current_flows[packet.getBwdID()]
                 del flow
             else:
@@ -146,6 +146,8 @@ def live(interface):
         classify(f.terminated())
         
 def SendRecord(data):
+    if data.label == "SSH-Patator" or data.label == "FTP-Patator" :
+        data.label = "Brute Force"
     url = URL + "/api/Home/AddRecord"
     headers = {'Content-type': 'application/json'}
     payload = vars(data)

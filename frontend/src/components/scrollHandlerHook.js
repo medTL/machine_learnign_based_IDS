@@ -22,6 +22,11 @@ export default function useScrollHandlerHook(filter, recordId) {
        }
        fetchCount();
    }, [])
+    function ListFiltered()
+    {
+        return filter.page === 0 || filter.attack !== "" || filter.fromDate === null || filter.toDate === null;
+    }
+   
     useEffect(  () => {
 
         setLoading(true)
@@ -32,10 +37,16 @@ export default function useScrollHandlerHook(filter, recordId) {
             const request =  await getRecords(filter, cancel);
             if(request.data && request.data.error === null)
             {
-                setRecords(prevData =>{
-                    return prevData.concat(request.data.data);
-                });
-                setHasMore(request.data.data.length > 0)
+                if(ListFiltered())
+                {
+                    setRecords(request.data.data); 
+                } else {
+                    setRecords(prevData =>{
+                        return prevData.concat(request.data.data);
+                    });
+                }
+            
+                setHasMore(Records.length < count)
                 setLoading(false)
             } else {
                 setLoading(false)
@@ -48,13 +59,18 @@ export default function useScrollHandlerHook(filter, recordId) {
       }, [filter])
 
       useEffect(() => {
+          console.log("ID CHANGED")
         async function DeleteRecordHandler() {
             if(recordId !== null)
             {
+                console.log(recordId);
                 const deleteRequest = await DeleteRecord(recordId)
                 
                 if (deleteRequest.data.error === null) {
                   toast.success("Record deleted successfully!")
+                  setRecords(prevRecords => {
+                      return prevRecords.filter(x => x.id !== recordId);
+                  })
                 } else {
                   toast.error("Record delete failed!")
                 }
