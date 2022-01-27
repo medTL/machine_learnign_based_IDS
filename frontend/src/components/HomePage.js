@@ -40,7 +40,7 @@ function HomePage() {
         <div className="chart-card">
           <h4 className="chart-title">Network:</h4>
           <div
-            data-netdata="system.net"
+            data-netdata="system.ip"
             data-chart-library="dygraph"
             data-colors="#03DAC5 #CF6679"
             data-legend="yes"

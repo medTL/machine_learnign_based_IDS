@@ -6,13 +6,13 @@ function RecordTileLineItem({Record}) {
   return (
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
-      contentStyle={{background: "var(--primary-varient)", color: "#fff"}}
-      contentArrowStyle={{borderRight: "7px solid  var(--primary-varient)"}}
+      contentStyle={{background: "var(--primary)", color: "#fff"}}
+      contentArrowStyle={{borderRight: "7px solid  var(--primary)"}}
       date={moment(Record.createdAt).format("yyyy DD MM: HH:mm")}
       iconStyle={{
         width: "1em",
         height: "1em",
-        background: "var(--primary-varient)",
+        background: "var(--primary)",
         color: "#fff",
         marginLeft:"-0.5em",
         marginTop:"1em"

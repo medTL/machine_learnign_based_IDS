@@ -49,7 +49,7 @@ def classify(features):
                         destinationIp = record.dest,
                         destinationPort = str(record.dest_port),
                         label = result[0])
-      #  SendRecord(newRecord)
+        SendRecord(newRecord)
         time.sleep(1)
        
 
@@ -87,7 +87,7 @@ def newPacket(p):
             # check for timeout
             # for some reason they only do it if packet count > 1
             if (packet.getTimestamp() - flow.getFlowStartTime()) > FlowTimeout:
-                #classify(flow.terminated())
+                classify(flow.terminated())
                 del current_flows[packet.getFwdID()]
                 flow = Flow(packet)
                 current_flows[packet.getFwdID()] = flow
@@ -95,7 +95,7 @@ def newPacket(p):
             # check for fin flag
             elif packet.getFINFlag() or packet.getRSTFlag():
                 flow.new(packet, 'fwd')
-                #classify(flow.terminated())
+                classify(flow.terminated())
                 del current_flows[packet.getFwdID()]
                 del flow
 
@@ -108,7 +108,7 @@ def newPacket(p):
 
             # check for timeout
             if (packet.getTimestamp() - flow.getFlowStartTime()) > FlowTimeout:
-                classify(flow.terminated())
+                #classify(flow.terminated())
                 del current_flows[packet.getBwdID()]
                 del flow
                 flow = Flow(packet)
@@ -116,7 +116,7 @@ def newPacket(p):
 
             elif packet.getFINFlag() or packet.getRSTFlag():
                 flow.new(packet, 'bwd')
-                classify(flow.terminated())
+                #classify(flow.terminated())
                 del current_flows[packet.getBwdID()]
                 del flow
             else:

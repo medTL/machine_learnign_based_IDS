@@ -172,6 +172,7 @@ function HistoryPage() {
             <Button
               onClick={clearDatabaseHandler}
               color="error"
+
               variant="contained"
             >
               Clear database
