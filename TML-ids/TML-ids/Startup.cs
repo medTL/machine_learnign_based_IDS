@@ -68,7 +68,7 @@ namespace TML_ids
             app.UseStaticFiles();
 
             app.UseRouting();
-            app.UseCors(builder => builder.WithOrigins(Tools.GetEnvString("WEB_SOCKET")).AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+            app.UseCors(builder => builder.WithOrigins("http://localhost:3000", "http://51.178.169.197", "http://tml-ids.ddns.net/").AllowAnyMethod().AllowAnyHeader().AllowCredentials());
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
