@@ -1,0 +1,177 @@
+﻿dbug: Microsoft.Extensions.Hosting.Internal.Host[1] @ 2022-02-02T13:01:27.0091357+01:00
+      Hosting starting
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[0] @ 2022-02-02T13:01:27.0887803+01:00
+      User profile is available. Using '/home/talel/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+dbug: Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository[37] @ 2022-02-02T13:01:27.1148926+01:00
+      Reading data from file '/home/talel/.aspnet/DataProtection-Keys/key-fc1364d1-3133-48cb-ab41-911be5709b21.xml'.
+dbug: Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository[37] @ 2022-02-02T13:01:27.1185351+01:00
+      Reading data from file '/home/talel/.aspnet/DataProtection-Keys/key-db420dee-7a2d-4d02-ace2-10c9835217a4.xml'.
+dbug: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[18] @ 2022-02-02T13:01:27.1278385+01:00
+      Found key {fc1364d1-3133-48cb-ab41-911be5709b21}.
+dbug: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[18] @ 2022-02-02T13:01:27.1371843+01:00
+      Found key {db420dee-7a2d-4d02-ace2-10c9835217a4}.
+dbug: Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver[13] @ 2022-02-02T13:01:27.1473856+01:00
+      Considering key {fc1364d1-3133-48cb-ab41-911be5709b21} with expiration date 2022-03-27 09:21:49Z as default key.
+dbug: Microsoft.AspNetCore.DataProtection.TypeForwardingActivator[0] @ 2022-02-02T13:01:27.1630461+01:00
+      Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.19.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+dbug: Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory[11] @ 2022-02-02T13:01:27.1661783+01:00
+      Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+dbug: Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory[10] @ 2022-02-02T13:01:27.1665458+01:00
+      Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+dbug: Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider[2] @ 2022-02-02T13:01:27.1749114+01:00
+      Using key {fc1364d1-3133-48cb-ab41-911be5709b21} as the default key.
+dbug: Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService[0] @ 2022-02-02T13:01:27.1756127+01:00
+      Key ring with default key {fc1364d1-3133-48cb-ab41-911be5709b21} was loaded during application startup.
+dbug: Microsoft.AspNetCore.SignalR.Internal.DefaultHubProtocolResolver[RegisteredSignalRProtocol] @ 2022-02-02T13:01:27.3301210+01:00
+      Registered SignalR Protocol: json, implemented by Microsoft.AspNetCore.SignalR.Protocol.JsonHubProtocol.
+dbug: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer[FailedToLocateDevelopmentCertificateFile] @ 2022-02-02T13:01:27.3966298+01:00
+      Failed to locate the development https certificate at '(null)'.
+info: Microsoft.Hosting.Lifetime[0] @ 2022-02-02T13:01:27.4149699+01:00
+      Now listening on: http://0.0.0.0:2500
+dbug: Microsoft.AspNetCore.Hosting.Diagnostics[0] @ 2022-02-02T13:01:27.4151600+01:00
+      Loaded hosting startup assembly TML-ids
+info: Microsoft.Hosting.Lifetime[0] @ 2022-02-02T13:01:27.4173161+01:00
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0] @ 2022-02-02T13:01:27.4173907+01:00
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0] @ 2022-02-02T13:01:27.4174252+01:00
+      Content root path: /home/talel/Documents/ids/TML-ids/TML-ids
+dbug: Microsoft.Extensions.Hosting.Internal.Host[2] @ 2022-02-02T13:01:27.4174683+01:00
+      Hosting started
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionAccepted] @ 2022-02-02T13:01:55.1509414+01:00
+      Connection id "0HMF68F784JK2" accepted.
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionStart] @ 2022-02-02T13:01:55.1521159+01:00
+      Connection id "0HMF68F784JK2" started.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1] @ 2022-02-02T13:01:55.1733010+01:00
+      => ConnectionId:0HMF68F784JK2 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK2:00000001, SpanId:|dc2a36cd-49c58b4eff22e90c., TraceId:dc2a36cd-49c58b4eff22e90c, ParentId:
+      Request starting HTTP/1.1 OPTIONS http://localhost:2500/RecordsHub/negotiate?negotiateVersion=1  
+dbug: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware[WildcardDetected] @ 2022-02-02T13:01:55.1776401+01:00
+      => ConnectionId:0HMF68F784JK2 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK2:00000001, SpanId:|dc2a36cd-49c58b4eff22e90c., TraceId:dc2a36cd-49c58b4eff22e90c, ParentId:
+      Wildcard detected, all requests with hosts will be allowed.
+dbug: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[MethodNotSupported] @ 2022-02-02T13:01:55.1880197+01:00
+      => ConnectionId:0HMF68F784JK2 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK2:00000001, SpanId:|dc2a36cd-49c58b4eff22e90c., TraceId:dc2a36cd-49c58b4eff22e90c, ParentId:
+      OPTIONS requests are not supported
+dbug: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[MethodNotSupported] @ 2022-02-02T13:01:55.1880961+01:00
+      => ConnectionId:0HMF68F784JK2 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK2:00000001, SpanId:|dc2a36cd-49c58b4eff22e90c., TraceId:dc2a36cd-49c58b4eff22e90c, ParentId:
+      OPTIONS requests are not supported
+dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[CandidatesFound] @ 2022-02-02T13:01:55.2091871+01:00
+      => ConnectionId:0HMF68F784JK2 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK2:00000001, SpanId:|dc2a36cd-49c58b4eff22e90c., TraceId:dc2a36cd-49c58b4eff22e90c, ParentId:
+      1 candidate(s) found for the request path '/RecordsHub/negotiate'
+dbug: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware[MatchSuccess] @ 2022-02-02T13:01:55.2099087+01:00
+      => ConnectionId:0HMF68F784JK2 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK2:00000001, SpanId:|dc2a36cd-49c58b4eff22e90c., TraceId:dc2a36cd-49c58b4eff22e90c, ParentId:
+      Request matched endpoint '/RecordsHub/negotiate'
+dbug: Microsoft.AspNetCore.Cors.Infrastructure.CorsService[RequestHasOriginHeader] @ 2022-02-02T13:01:55.2109378+01:00
+      => ConnectionId:0HMF68F784JK2 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK2:00000001, SpanId:|dc2a36cd-49c58b4eff22e90c., TraceId:dc2a36cd-49c58b4eff22e90c, ParentId:
+      The request has an origin header: 'http://localhost:3000'.
+info: Microsoft.AspNetCore.Cors.Infrastructure.CorsService[PolicySuccess] @ 2022-02-02T13:01:55.2111440+01:00
+      => ConnectionId:0HMF68F784JK2 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK2:00000001, SpanId:|dc2a36cd-49c58b4eff22e90c., TraceId:dc2a36cd-49c58b4eff22e90c, ParentId:
+      CORS policy execution successful.
+dbug: Microsoft.AspNetCore.Cors.Infrastructure.CorsService[IsPreflightRequest] @ 2022-02-02T13:01:55.2121487+01:00
+      => ConnectionId:0HMF68F784JK2 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK2:00000001, SpanId:|dc2a36cd-49c58b4eff22e90c., TraceId:dc2a36cd-49c58b4eff22e90c, ParentId:
+      The request is a preflight request.
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionKeepAlive] @ 2022-02-02T13:01:55.2157049+01:00
+      => ConnectionId:0HMF68F784JK2 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK2:00000001, SpanId:|dc2a36cd-49c58b4eff22e90c., TraceId:dc2a36cd-49c58b4eff22e90c, ParentId:
+      Connection id "0HMF68F784JK2" completed keep alive response.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2] @ 2022-02-02T13:01:55.2170007+01:00
+      => ConnectionId:0HMF68F784JK2 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK2:00000001, SpanId:|dc2a36cd-49c58b4eff22e90c., TraceId:dc2a36cd-49c58b4eff22e90c, ParentId:
+      Request finished in 45.3144ms 204 
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionAccepted] @ 2022-02-02T13:01:55.2183180+01:00
+      Connection id "0HMF68F784JK3" accepted.
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionStart] @ 2022-02-02T13:01:55.2186909+01:00
+      Connection id "0HMF68F784JK3" started.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1] @ 2022-02-02T13:01:55.2199410+01:00
+      => ConnectionId:0HMF68F784JK3 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK3:00000001, SpanId:|dc2a36ce-49c58b4eff22e90c., TraceId:dc2a36ce-49c58b4eff22e90c, ParentId:
+      Request starting HTTP/1.1 POST http://localhost:2500/RecordsHub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+dbug: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[MethodNotSupported] @ 2022-02-02T13:01:55.2202993+01:00
+      => ConnectionId:0HMF68F784JK3 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK3:00000001, SpanId:|dc2a36ce-49c58b4eff22e90c., TraceId:dc2a36ce-49c58b4eff22e90c, ParentId:
+      POST requests are not supported
+dbug: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[MethodNotSupported] @ 2022-02-02T13:01:55.2203173+01:00
+      => ConnectionId:0HMF68F784JK3 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK3:00000001, SpanId:|dc2a36ce-49c58b4eff22e90c., TraceId:dc2a36ce-49c58b4eff22e90c, ParentId:
+      POST requests are not supported
+dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[CandidatesFound] @ 2022-02-02T13:01:55.2209147+01:00
+      => ConnectionId:0HMF68F784JK3 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK3:00000001, SpanId:|dc2a36ce-49c58b4eff22e90c., TraceId:dc2a36ce-49c58b4eff22e90c, ParentId:
+      1 candidate(s) found for the request path '/RecordsHub/negotiate'
+dbug: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware[MatchSuccess] @ 2022-02-02T13:01:55.2209570+01:00
+      => ConnectionId:0HMF68F784JK3 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK3:00000001, SpanId:|dc2a36ce-49c58b4eff22e90c., TraceId:dc2a36ce-49c58b4eff22e90c, ParentId:
+      Request matched endpoint '/RecordsHub/negotiate'
+dbug: Microsoft.AspNetCore.Cors.Infrastructure.CorsService[RequestHasOriginHeader] @ 2022-02-02T13:01:55.2210839+01:00
+      => ConnectionId:0HMF68F784JK3 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK3:00000001, SpanId:|dc2a36ce-49c58b4eff22e90c., TraceId:dc2a36ce-49c58b4eff22e90c, ParentId:
+      The request has an origin header: 'http://localhost:3000'.
+info: Microsoft.AspNetCore.Cors.Infrastructure.CorsService[PolicySuccess] @ 2022-02-02T13:01:55.2211264+01:00
+      => ConnectionId:0HMF68F784JK3 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK3:00000001, SpanId:|dc2a36ce-49c58b4eff22e90c., TraceId:dc2a36ce-49c58b4eff22e90c, ParentId:
+      CORS policy execution successful.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[ExecutingEndpoint] @ 2022-02-02T13:01:55.2223097+01:00
+      => ConnectionId:0HMF68F784JK3 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK3:00000001, SpanId:|dc2a36ce-49c58b4eff22e90c., TraceId:dc2a36ce-49c58b4eff22e90c, ParentId:
+      Executing endpoint '/RecordsHub/negotiate'
+dbug: Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager[CreatedNewConnection] @ 2022-02-02T13:01:55.2245353+01:00
+      => ConnectionId:0HMF68F784JK3 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK3:00000001, SpanId:|dc2a36ce-49c58b4eff22e90c., TraceId:dc2a36ce-49c58b4eff22e90c, ParentId: => 
+      New connection QrOKiid35kJe1j8nv9PQjA created.
+dbug: Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionDispatcher[NegotiationRequest] @ 2022-02-02T13:01:55.2283921+01:00
+      => ConnectionId:0HMF68F784JK3 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK3:00000001, SpanId:|dc2a36ce-49c58b4eff22e90c., TraceId:dc2a36ce-49c58b4eff22e90c, ParentId: => TransportConnectionId:QrOKiid35kJe1j8nv9PQjA
+      Sending negotiation response.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[ExecutedEndpoint] @ 2022-02-02T13:01:55.2289860+01:00
+      => ConnectionId:0HMF68F784JK3 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK3:00000001, SpanId:|dc2a36ce-49c58b4eff22e90c., TraceId:dc2a36ce-49c58b4eff22e90c, ParentId:
+      Executed endpoint '/RecordsHub/negotiate'
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionKeepAlive] @ 2022-02-02T13:01:55.2290260+01:00
+      => ConnectionId:0HMF68F784JK3 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK3:00000001, SpanId:|dc2a36ce-49c58b4eff22e90c., TraceId:dc2a36ce-49c58b4eff22e90c, ParentId:
+      Connection id "0HMF68F784JK3" completed keep alive response.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2] @ 2022-02-02T13:01:55.2291176+01:00
+      => ConnectionId:0HMF68F784JK3 => RequestPath:/RecordsHub/negotiate RequestId:0HMF68F784JK3:00000001, SpanId:|dc2a36ce-49c58b4eff22e90c., TraceId:dc2a36ce-49c58b4eff22e90c, ParentId:
+      Request finished in 9.1744ms 200 application/json
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionAccepted] @ 2022-02-02T13:01:55.3210716+01:00
+      Connection id "0HMF68F784JK4" accepted.
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionStart] @ 2022-02-02T13:01:55.3211348+01:00
+      Connection id "0HMF68F784JK4" started.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1] @ 2022-02-02T13:01:55.3212829+01:00
+      => ConnectionId:0HMF68F784JK4 => RequestPath:/RecordsHub RequestId:0HMF68F784JK4:00000001, SpanId:|dc2a36cf-49c58b4eff22e90c., TraceId:dc2a36cf-49c58b4eff22e90c, ParentId:
+      Request starting HTTP/1.1 GET http://localhost:2500/RecordsHub?id=3zCXHTVAU0zaFWEfC6RJ4g  
+dbug: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[PathMismatch] @ 2022-02-02T13:01:55.3245390+01:00
+      => ConnectionId:0HMF68F784JK4 => RequestPath:/RecordsHub RequestId:0HMF68F784JK4:00000001, SpanId:|dc2a36cf-49c58b4eff22e90c., TraceId:dc2a36cf-49c58b4eff22e90c, ParentId:
+      The request path  does not match the path filter
+dbug: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[FileTypeNotSupported] @ 2022-02-02T13:01:55.3246508+01:00
+      => ConnectionId:0HMF68F784JK4 => RequestPath:/RecordsHub RequestId:0HMF68F784JK4:00000001, SpanId:|dc2a36cf-49c58b4eff22e90c., TraceId:dc2a36cf-49c58b4eff22e90c, ParentId:
+      The request path /RecordsHub does not match a supported file type
+dbug: Microsoft.AspNetCore.Routing.Matching.DfaMatcher[CandidatesFound] @ 2022-02-02T13:01:55.3246865+01:00
+      => ConnectionId:0HMF68F784JK4 => RequestPath:/RecordsHub RequestId:0HMF68F784JK4:00000001, SpanId:|dc2a36cf-49c58b4eff22e90c., TraceId:dc2a36cf-49c58b4eff22e90c, ParentId:
+      1 candidate(s) found for the request path '/RecordsHub'
+dbug: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware[MatchSuccess] @ 2022-02-02T13:01:55.3247152+01:00
+      => ConnectionId:0HMF68F784JK4 => RequestPath:/RecordsHub RequestId:0HMF68F784JK4:00000001, SpanId:|dc2a36cf-49c58b4eff22e90c., TraceId:dc2a36cf-49c58b4eff22e90c, ParentId:
+      Request matched endpoint '/RecordsHub'
+dbug: Microsoft.AspNetCore.Cors.Infrastructure.CorsService[RequestHasOriginHeader] @ 2022-02-02T13:01:55.3250384+01:00
+      => ConnectionId:0HMF68F784JK4 => RequestPath:/RecordsHub RequestId:0HMF68F784JK4:00000001, SpanId:|dc2a36cf-49c58b4eff22e90c., TraceId:dc2a36cf-49c58b4eff22e90c, ParentId:
+      The request has an origin header: 'http://localhost:3000'.
+info: Microsoft.AspNetCore.Cors.Infrastructure.CorsService[PolicySuccess] @ 2022-02-02T13:01:55.3250735+01:00
+      => ConnectionId:0HMF68F784JK4 => RequestPath:/RecordsHub RequestId:0HMF68F784JK4:00000001, SpanId:|dc2a36cf-49c58b4eff22e90c., TraceId:dc2a36cf-49c58b4eff22e90c, ParentId:
+      CORS policy execution successful.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[ExecutingEndpoint] @ 2022-02-02T13:01:55.3252373+01:00
+      => ConnectionId:0HMF68F784JK4 => RequestPath:/RecordsHub RequestId:0HMF68F784JK4:00000001, SpanId:|dc2a36cf-49c58b4eff22e90c., TraceId:dc2a36cf-49c58b4eff22e90c, ParentId:
+      Executing endpoint '/RecordsHub'
+dbug: Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionDispatcher[EstablishedConnection] @ 2022-02-02T13:01:55.3301571+01:00
+      => ConnectionId:0HMF68F784JK4 => RequestPath:/RecordsHub RequestId:0HMF68F784JK4:00000001, SpanId:|dc2a36cf-49c58b4eff22e90c., TraceId:dc2a36cf-49c58b4eff22e90c, ParentId: => TransportConnectionId:QrOKiid35kJe1j8nv9PQjA
+      Establishing new connection.
+dbug: Microsoft.AspNetCore.SignalR.HubConnectionHandler[ConnectedStarting] @ 2022-02-02T13:01:55.3324957+01:00
+      => ConnectionId:0HMF68F784JK4 => RequestPath:/RecordsHub RequestId:0HMF68F784JK4:00000001, SpanId:|dc2a36cf-49c58b4eff22e90c., TraceId:dc2a36cf-49c58b4eff22e90c, ParentId: => TransportConnectionId:QrOKiid35kJe1j8nv9PQjA
+      OnConnectedAsync started.
+dbug: Microsoft.AspNetCore.Http.Connections.Internal.Transports.WebSocketsTransport[SocketOpened] @ 2022-02-02T13:01:55.3356786+01:00
+      => ConnectionId:0HMF68F784JK4 => RequestPath:/RecordsHub RequestId:0HMF68F784JK4:00000001, SpanId:|dc2a36cf-49c58b4eff22e90c., TraceId:dc2a36cf-49c58b4eff22e90c, ParentId: => TransportConnectionId:QrOKiid35kJe1j8nv9PQjA
+      Socket opened using Sub-Protocol: '(null)'.
+dbug: Microsoft.AspNetCore.SignalR.Internal.DefaultHubProtocolResolver[FoundImplementationForProtocol] @ 2022-02-02T13:01:55.3417409+01:00
+      => ConnectionId:0HMF68F784JK4 => RequestPath:/RecordsHub RequestId:0HMF68F784JK4:00000001, SpanId:|dc2a36cf-49c58b4eff22e90c., TraceId:dc2a36cf-49c58b4eff22e90c, ParentId: => TransportConnectionId:QrOKiid35kJe1j8nv9PQjA
+      Found protocol implementation for requested protocol: json.
+dbug: Microsoft.AspNetCore.SignalR.HubConnectionContext[HandshakeComplete] @ 2022-02-02T13:01:55.3429546+01:00
+      => ConnectionId:0HMF68F784JK4 => RequestPath:/RecordsHub RequestId:0HMF68F784JK4:00000001, SpanId:|dc2a36cf-49c58b4eff22e90c., TraceId:dc2a36cf-49c58b4eff22e90c, ParentId: => TransportConnectionId:QrOKiid35kJe1j8nv9PQjA
+      Completed connection handshake. Using HubProtocol 'json'.
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionDisconnect] @ 2022-02-02T13:03:55.4081285+01:00
+      => ConnectionId:0HMF68F784JK2
+      Connection id "0HMF68F784JK2" disconnecting.
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionDisconnect] @ 2022-02-02T13:03:55.4081283+01:00
+      => ConnectionId:0HMF68F784JK3
+      Connection id "0HMF68F784JK3" disconnecting.
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionStop] @ 2022-02-02T13:03:55.4126591+01:00
+      Connection id "0HMF68F784JK2" stopped.
+dbug: Microsoft.AspNetCore.Server.Kestrel[ConnectionStop] @ 2022-02-02T13:03:55.4126258+01:00
+      Connection id "0HMF68F784JK3" stopped.
+dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[ConnectionWriteFin] @ 2022-02-02T13:03:55.4173512+01:00
+      Connection id "0HMF68F784JK3" sending FIN because: "The Socket transport's send loop completed gracefully."
+dbug: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets[ConnectionWriteFin] @ 2022-02-02T13:03:55.4173335+01:00
+      Connection id "0HMF68F784JK2" sending FIN because: "The Socket transport's send loop completed gracefully."

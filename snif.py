@@ -141,7 +141,7 @@ def newPacket(p):
 def live(interface):
 
     print("Begin Sniffing On interface "+ interface + " ".center(20, ' '))
-    sniff(iface=interface, prn=newPacket)
+    sniff(iface=interface, prn=newPacket, store=0)
     for f in current_flows.values():
         classify(f.terminated())
         
