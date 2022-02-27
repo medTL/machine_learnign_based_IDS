@@ -1,36 +1,44 @@
-:root{
+:root {
   --primary: #f6472c;
-  --primary-varient:   #ae00d1 ;
-  --secondary :#16d184;
+  --primary-varient: #ae00d1;
+  --secondary: #16d184;
   --item-background: #242331;
-  --item-background2:#1f1f1f;
-  --error: #CF6679;
+  --item-background2: #1f1f1f;
+  --error: #cf6679;
   --background: #141115;
-  
-  
-
-                                                                                
 }
-html, body {
-  font-family: 'Roboto Mono', monospace !important;
+html,
+body {
+  font-family: "Roboto Mono", monospace !important;
+  overflow: hidden;
+}
+html,
+body,
+#root,
+.App,
+.homepage,
+.homepage-layout {
+  height: 100% !important;
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background) !important;
 }
-
+.container {
+  width: 80% !important;
+}
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 .navbar {
-  background-color: var(--item-background) !important; 
+  background-color: var(--item-background) !important;
   margin-bottom: 0 !important;
 }
 .navbar-brand {
@@ -44,11 +52,21 @@ code {
   font-weight: 900;
   font-size: 16px;
   margin-right: 1em;
-  
+}
+.homepage-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2em;
+}
+.history_panel {
+  width: 100%;
+  height: 5em !important;
 }
 .historyPage .history_panel {
   width: 100%;
-  height: 5em;
+  height: 5em !important;
   padding: 1em;
   display: flex;
   flex-direction: row;
@@ -60,18 +78,32 @@ code {
 }
 .history_table-wrapper {
   position: relative;
-  padding: 1em;
+  padding: 1em !important;
   display: grid;
+  color: #ffffff;
   place-items: center;
   height: calc(100vh - 13em) !important;
   clip-path: polygon(100% 0, 100% 100%, 7% 100%, 0 93%, 0 0);
   z-index: 1 !important;
-
+}
+.responsiveTable {
+  color: #ffffff;
+  padding: 1em;
+}
+.responsiveTable thead {
+  height: 4em;
+  background-color: var(--item-background2) !important;
+}
+.responsiveTable td {
+  height: 2.5em;
+}
+.responsiveTable th {
+ padding: 0.5em 0.75em;
+ text-align: center;
 }
 .historyPage .history_table-wrapper {
   background-color: var(--item-background);
   position: relative;
- 
 }
 .historyPage .history_table-wrapper::after {
   content: "";
@@ -82,21 +114,26 @@ code {
   height: 100%;
   z-index: -1;
   border-radius: 15px;
-  background: rgb(141,0,196);
-  background: linear-gradient(90deg, rgba(141,0,196,1) 0%, rgba(184,0,168,1) 56%, var(--primary)100%);
+  background: rgb(141, 0, 196);
+  background: linear-gradient(
+    90deg,
+    rgba(141, 0, 196, 1) 0%,
+    rgba(184, 0, 168, 1) 56%,
+    var(--primary) 100%
+  );
 }
 .history_table {
   position: relative;
   width: 95%;
   height: 95%;
   margin: auto;
-  border-radius:  15px;
+  border-radius: 15px;
   overflow-y: scroll;
   overflow-x: hidden;
 
   background-color: var(--item-background2) !important;
-  -ms-overflow-style: none !important;  /* IE and Edge */
-  scrollbar-width: none !important;  /* Firefox */
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
 }
 
 .empty_data_message {
@@ -115,21 +152,22 @@ code {
 table {
   table-layout: fixed !important;
   background-color: var(--item-background2) !important;
-
 }
-.history_table thead, th {
-  background-color: var(--item-background) !important;
+.history_table thead,
+th {
+ 
 }
 .history_table th {
   position: sticky;
   top: -1px;
 }
-.history_table tr, td {
+.history_table tr,
+td {
   background-color: var(--item-background2) !important;
-  border: 1px solid var(--item-background)
+  border: 1px solid var(--item-background);
 }
-.table>:not(:first-child) {
-   border-top: 2px solid var(--item-background2); 
+.table > :not(:first-child) {
+  border-top: 2px solid var(--item-background2);
 }
 .fa-trash-alt {
   color: var(--error);
@@ -144,11 +182,9 @@ table {
   align-items: center;
   justify-content: flex-end;
 }
-.homepage  .charts {
-  position: absolute;
-  top: 200px;
-  left: 5%;
-  width: 40em;
+.homepage .charts {
+  position: relative;
+  width: 60em;
   height: 70%;
   display: flex;
   flex-direction: column;
@@ -159,29 +195,32 @@ table {
 }
 .chart-card {
   background-color: var(--item-background2);
-  border-radius:15px;
+  border-radius: 15px;
   position: relative;
   width: 100%;
   height: 220px;
   color: #ffffff !important;
   padding: 0 1em;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.24);
--webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.24);
--moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.24);
-  
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.24);
 }
-.chart-card::after{
-  content: ""; 
+.chart-card::after {
+  content: "";
   position: absolute;
-  border-radius:15px;
+  border-radius: 15px;
   width: 90%;
   height: 90%;
   left: -0.5em;
   top: -0.5em;
-z-index: -1;
-  background: rgb(141,0,196);
-background: linear-gradient(90deg, rgba(141,0,196,1) 0%, rgba(184,0,168,1) 56%, var(--primary)100%);
-  
+  z-index: -1;
+  background: rgb(141, 0, 196);
+  background: linear-gradient(
+    90deg,
+    rgba(141, 0, 196, 1) 0%,
+    rgba(184, 0, 168, 1) 56%,
+    var(--primary) 100%
+  );
 }
 .homepage .history_table-wrapper:before {
   background-color: var(--background) !important;
@@ -196,7 +235,6 @@ background: linear-gradient(90deg, rgba(141,0,196,1) 0%, rgba(184,0,168,1) 56%, 
   color: var(--primary);
   font-weight: 900;
   text-align: left;
-
 }
 .dygraph-title {
   display: none;
@@ -210,7 +248,7 @@ background: linear-gradient(90deg, rgba(141,0,196,1) 0%, rgba(184,0,168,1) 56%, 
 .netdata-legend-resize-handler {
   display: none !important;
 }
-.chart-card  div {
+.chart-card div {
   margin: auto;
 }
 
@@ -219,6 +257,7 @@ background: linear-gradient(90deg, rgba(141,0,196,1) 0%, rgba(184,0,168,1) 56%, 
   font-size: 0.8em !important;
 }
 .timeLine-container {
+  position: relative;
   background-color: var(--item-background);
   width: 98%;
   height: 98%;
@@ -228,9 +267,8 @@ background: linear-gradient(90deg, rgba(141,0,196,1) 0%, rgba(184,0,168,1) 56%, 
   clip-path: polygon(13% 0, 100% 0, 100% 83%, 86% 100%, 0 100%, 0 19%);
   overflow-y: scroll;
   z-index: 999;
-
 }
-.timeLine-container::-webkit-scrollbar{
+.timeLine-container::-webkit-scrollbar {
   display: none !important;
 }
 .border-wrapper {
@@ -239,17 +277,23 @@ background: linear-gradient(90deg, rgba(141,0,196,1) 0%, rgba(184,0,168,1) 56%, 
   display: grid;
   clip-path: polygon(13% 0, 100% 0, 100% 83%, 86% 100%, 0 100%, 0 19%);
   place-items: center;
-  background: rgb(141,0,196);
-  background: linear-gradient(90deg, rgba(141,0,196,1) 0%, rgba(184,0,168,1) 56%, var(--primary)100%);
+  background: rgb(141, 0, 196);
+  background: linear-gradient(
+    90deg,
+    rgba(141, 0, 196, 1) 0%,
+    rgba(184, 0, 168, 1) 56%,
+    var(--primary) 100%
+  );
 }
-table, tr, th 
-{
+table,
+tr,
+th {
   border: none !important;
 }
- tbody tr >  td {
+tbody tr > td {
   border: none !important;
 }
-tbody tr  {
+tbody tr {
   border-bottom: 1px solid var(--item-background) !important;
 }
 .timeLine-nodata {
@@ -262,14 +306,83 @@ tbody tr  {
   margin-top: -50px;
   margin-left: -50px;
 }
-@media only screen and (max-width: 1024px)
-{
+.network-chart {
+  height: 100%;
+  height: 100%;
+  max-height: 170px !important;
+}
+.chart-container {
+  width: 100%;
+  height: 172px !important;
+}
+@media only screen and (max-width: 1024px) {
+  html,
+  body {
+    overflow-y: scroll;
+  }
+  .history_table-wrapper {
+    display: flex !important;
+    flex-grow: 1;
+    height: auto !important;
+
+  }
+  .historyPage .history_table-wrapper::after {
+    clip-path: none !important;
+  }
+  .table-responsive {
+    border: none !important;
+    min-height: 35em !important;
+  }
+  .table-responsive tr {
+    border-bottom: 1px solid #ddd !important;
+    margin-bottom: 2em;
+  }
+  .table-responsive tr:last-child {
+    border-bottom: none !important;
+  }
+  .table-responsive .fa-trash-alt {
+    position: absolute;
+    top: -200px;
+    right: 5%;
+  }
+  .chart-gauge {
+    margin-top: 2em !important;
+  }
+  .historyPage .history_panel  {
+    display: flex;
+    flex-direction: column;
+   width: 100%;
+   height: auto !important;
+  }
+  .homepage-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .charts {
+    width: 100% !important;
+  }
+  .chart-card {
+    height: 180px !important;
+  }
+  .network-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .realTime-view {
+    width: 100% !important;
+  }
+  .container {
+    width: 100% !important;
+  }
   .vertical-timeline-element-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
   }
   .vertical-timeline-element-content h4 {
     font-size: 1em;
@@ -287,13 +400,12 @@ tbody tr  {
   margin-right: 0.4em;
 }
 .realTime-view {
-  width: 70%;
-  height: 100%;
+  width: 80%;
+  height: 80vh;
 }
 .realTime-view .realTime-view-title {
   color: var(--primary-varient) !important;
   font-weight: 900 !important;
-
 }
 .actions-buttons {
   margin-left: auto;

@@ -1,20 +1,29 @@
 import moment from "moment"
 import React from "react"
 import VerticalTimelineElement from "react-vertical-timeline-component/dist-modules/VerticalTimelineElement"
+import useWindowDimensions from "./useWindowDeminsions";
 
 function RecordTileLineItem({Record}) {
+  const { height, width } = useWindowDimensions();
   return (
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
       contentStyle={{background: "var(--primary)", color: "#fff"}}
       contentArrowStyle={{borderRight: "7px solid  var(--primary)"}}
       date={moment(Record.createdAt).format("yyyy DD MM: HH:mm")}
-      iconStyle={{
+      iconStyle= { width > 1024 ? {
         width: "1em",
         height: "1em",
         background: "var(--primary)",
         color: "#fff",
         marginLeft:"-0.5em",
+        marginTop:"1em"
+      }:  {
+        width: "1em",
+        height: "1em",
+        background: "var(--primary)",
+        color: "#fff",
+        marginLeft:"14px",
         marginTop:"1em"
       }}
     >

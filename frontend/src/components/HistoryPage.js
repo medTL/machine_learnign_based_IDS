@@ -1,7 +1,8 @@
 import React, {useCallback, useEffect, useRef, useState} from "react"
 import {RecordFilterModel} from "../Models/RecordFilterModel"
 import {clearDatabase, DeleteRecord, getRecords} from "../api/apiService"
-import {Table} from "react-bootstrap"
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import moment from "moment"
 import {toast, ToastContainer} from "react-toastify"
 import TextField from "@mui/material/TextField"
@@ -181,59 +182,59 @@ function HistoryPage() {
         </div>
         <div className="history_table-wrapper">
           <div className="table-responsive history_table ">
-            <Table bordered hover variant="dark">
-              <thead>
-                <tr>
-                  <th>Source ip</th>
-                  <th>Destination ip</th>
-                  <th>Destination port</th>
-                  <th>Attack</th>
-                  <th>Time</th>
-                  <th></th>
-                </tr>
-              </thead>
-             { !loading &&  <tbody>
+            <Table  >
+              <Thead>
+                <Tr>
+                  <Th>Source ip</Th>
+                  <Th>Destination ip</Th>
+                  <Th>Destination port</Th>
+                  <Th>Attack</Th>
+                  <Th>Time</Th>
+                  <Th></Th>
+                </Tr>
+              </Thead>
+             { !loading &&  <Tbody>
                 {Records.map((record, index) => {
 
                   if (Records.length === index + 1 && Records.length >= 30) {
                     return (
-                      <tr ref={lastRecordElementRef} key={record.id}>
-                        <td> {record.sourceIp}</td>
-                        <td>{record.destinationIp}</td>
-                        <td>{record.destinationPort}</td>
-                        <td>{record.label}</td>
-                        <td>
+                      <Tr ref={lastRecordElementRef} key={record.id}>
+                        <Td> {record.sourceIp}</Td>
+                        <Td>{record.destinationIp}</Td>
+                        <Td>{record.destinationPort}</Td>
+                        <Td>{record.label}</Td>
+                        <Td>
                           {moment(record.createdAt).format("yyyy DD MM: HH:mm")}
-                        </td>
-                        <td  onClick={() => DeleteRecordHandler(record.id)}>
+                        </Td>
+                        <Td  onClick={() => DeleteRecordHandler(record.id)}>
                           <i
                              
                             className="fas fa-trash-alt cursor"
                           ></i>
-                        </td>
-                      </tr>
+                        </Td>
+                      </Tr>
                     )
                   } else {
                     return (
-                      <tr key={record.id}>
-                        <td>{record.sourceIp}</td>
-                        <td>{record.destinationIp}</td>
-                        <td>{record.destinationPort}</td>
-                        <td>{record.label}</td>
-                        <td>
+                      <Tr key={record.id}>
+                        <Td>{record.sourceIp}</Td>
+                        <Td>{record.destinationIp}</Td>
+                        <Td>{record.destinationPort}</Td>
+                        <Td>{record.label}</Td>
+                        <Td>
                           {moment(record.createdAt).format("yyyy DD MM: HH:mm")}
-                        </td>
-                        <td  onClick={() => DeleteRecordHandler(record.id)}>
+                        </Td>
+                        <Td  onClick={() => DeleteRecordHandler(record.id)}>
                           <i
                             
                             className="fas fa-trash-alt cursor"
                           ></i>
-                        </td>
-                      </tr>
+                        </Td>
+                      </Tr>
                     )
                   }
                 })}
-              </tbody>}
+              </Tbody>}
             </Table>
             {loading && !error &&  (
               <Bars
